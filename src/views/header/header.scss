@@ -1,0 +1,11 @@
+.header { height: 64px; box-shadow: 0 2px 8px #f0f1f2; position: relative; }
+.header-logo { line-height: 64px; text-align: center; cursor: pointer; margin: 0; }
+.header-logo-line { float: left; width: 0; height: 56px; margin-top: 4px; margin-right: 10px; border-left: 1px solid rgb(233,233,233); }
+.pc-header-right { height: 100%; padding-right: 10vw; }
+.navbar { line-height: 64px; float: left; }
+
+.header-user-warp { float: right; height: 100%; display: flex; align-items: center; }
+.header-user-info { display: flex; align-items: center; justify-content: center; padding: 4px 0; }
+.header-user-name { margin: 0 10px; }
+.header-user-drapdown { min-width: 150px; text-align: center; }
+.mb-header-right { position: absolute; right: 30px; top: 16px; }

@@ -1,0 +1,11 @@
+.root { min-height: 100vh; display: flex; flex-direction: column; }
+
+// css public
+.mr5 { margin-right: 5px; }
+.full-height { height: 100%; }
+
+// container
+.container { padding: 10px 0 40px; flex: 1; }
+.pc-sidebar { line-height: 64px; text-align: center; }
+.mb-sidebar { padding-left: 10vw; }
+.home-content { padding: 0 10vw 0 20px; }
