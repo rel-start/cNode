@@ -32,10 +32,10 @@ const screenMenu = (
     }
     <Menu.Divider />
     <Menu.Item>
-      <Icon type="user" className="mr5" />登录
-      {/* {loginMenu} */}
+      {/* <Icon type="user" className="mr5" />登录 */}
+      {loginMenu}
     </Menu.Item>
-    <Menu.Item><Icon type="flag" className="mr5" />注册</Menu.Item>
+    {/* <Menu.Item><Icon type="flag" className="mr5" />注册</Menu.Item> */}
   </Menu>
 );
 

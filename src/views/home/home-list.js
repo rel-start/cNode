@@ -1,12 +1,15 @@
-import React from 'react';
-import { Col, List, Tag, Avatar, Pagination } from 'antd';
+import React from 'react'
+import { Col, List, Tag, Avatar, Pagination } from 'antd'
 
-function homeList({ topics, changePage = () => { }, current = 1, pageSize = 30, total = 500 }) {
+import { sidebarSchema } from '../../utils/schema'
+
+function homeList({ topics, loading, pageChange, currentPage, pageSize, pageLen }) {
   return (
     <Col xxl={20} xl={19} lg={19} md={18} xs={24} sm={24} className="home-content">
       <List
         itemLayout="horizontal"
         dataSource={topics}
+        loading={loading}
         renderItem={item => (
           <List.Item
             actions={
@@ -20,7 +23,7 @@ function homeList({ topics, changePage = () => { }, current = 1, pageSize = 30, 
               avatar={<Avatar src={item.author.avatar_url} />}
               title={
                 <div>
-                  <Tag color={'magenta'}>{'分享'}</Tag>
+                  <Tag color={item.top ? 'magenta' : item.good ? 'purple' : 'blue'}>{item.top ? '置顶' : item.good ? '精华' : sidebarSchema[item.tab] ? sidebarSchema[item.tab] : '其他'}</Tag>
                   <a href="https://ant.design">{item.title}</a>
                 </div>
               }
@@ -34,10 +37,10 @@ function homeList({ topics, changePage = () => { }, current = 1, pageSize = 30, 
         style={{ marginTop: 20 }}
         size="small"
         showQuickJumper
-        pageSize={30}
-        current={1}
-        total={500}
-        onChange={changePage}
+        pageSize={pageSize}
+        current={currentPage}
+        total={pageLen}
+        onChange={pageChange}
       />
     </Col>
   );

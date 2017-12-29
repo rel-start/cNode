@@ -6,6 +6,6 @@
 
 // container
 .container { padding: 10px 0 40px; flex: 1; }
-.pc-sidebar { line-height: 64px; text-align: center; }
+.pc-sidebar { line-height: 64px; text-align: center; border: none; }
 .mb-sidebar { padding-left: 10vw; }
-.home-content { padding: 0 10vw 0 20px; }
+.home-content { padding: 0 10vw 0 20px; border-left: 1px solid #e9e9e9; }
